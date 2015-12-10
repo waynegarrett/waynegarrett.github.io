@@ -1,0 +1,63 @@
+.nav-background
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  width: 100px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  box-shadow: 0 5px 50px rgba(0,0,0,0.4)
+
+nav.site-nav
+  background: transparent
+  width: 100px
+
+  .header-position
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    width: 100px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    height: 100%
+
+    /*transform:skew(-15deg,0deg)*/
+    /*-ms-transform:skew(-15deg,0deg)*/
+    /*-webkit-transform:skew(-15deg,0deg)*/
+
+    li, li:visited
+      background-color: transparent
+      padding: 0
+      margin-top: 0
+      height: 25%
+      display: block
+      text-align: center
+
+      &:hover
+        //background-color: $bg-color
+        color: white
+
+      &:before
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+
+      i
+        display: inline-block
+        vertical-align: middle
+
+      a:active
+        background-color: transparent
+
+section
+  a
+    color: black

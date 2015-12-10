@@ -1,0 +1,58 @@
+section.hero
+  background:
+    color: transparent
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  .header-content
+    background:
+      color: transparent
+      image: url(/assets/img/brush-bg.png)
+      size: contain
+      repeat: no-repeat
+    position: relative
+    width: 100%
+    height: 250px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    h1
+      color: white
+      line-height: 90%
+      margin: 0 30px
+
+  @media screen and ( max-width: 1024px)
+    h1
+      font-size: 4.5em
+      line-height: normal
+
+    img
+      width: 40%
+
+  @media screen and ( max-width: 600px)
+    .header-content
+      justify-content: flex-start
+      text-align: center
+
+      h1
+        font-size: 3.5em
+        line-height: normal
+        margin-top: 50px
+
+      img
+        width: 25%
+
+.header-border
+  background:
+    color: transparent
+    image: url(/assets/img/header-border.png)
+    size: cover
+    repeat: no-repeat
+  width: 100vw
+  height: 40vh
+  max-height: 264px

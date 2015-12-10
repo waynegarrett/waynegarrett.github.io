@@ -1,0 +1,99 @@
+*
+  transition: all 100ms ease-out
+  -webkit-transition: all 100ms ease-out
+
+.home-wrap
+  background:
+    image: url(/assets/img/sample.jpg)
+    position: top center
+    attachment: fixed
+    size: cover
+  display: flex
+  min-height: 100vh
+  max-width: 1500px
+
+  @media (max-width: 775px)
+    display: block
+
+.home-sections
+  flex: 1
+
+  section
+    //height: 100vh
+
+    .right
+      text-align: right
+      //border-right: 1px solid #CCC
+
+    //flex classes
+  .flex
+    display: flex
+    flex-direction: rows
+
+  .flex-center
+    justify-content: center
+
+  .flex-space-around
+    justify-content: space-around
+
+  .order-first
+    order: -1
+
+
+
+//columns
+.col-1
+  max-width: 300px
+  margin: 0 10px
+
+.col-2
+  max-width: 620px
+  margin: 0 0 0 30px
+
+.col-25
+  width: 25%
+
+.col-50
+  width: 50%
+
+.col-75
+  width: 65%
+
+.col-100
+  width: 100%
+
+.full-column
+  padding: 70px 30px
+
+
+@media (max-width: 768px)
+
+  .col-1
+    max-width: 100%
+
+  .col-50
+    width: auto
+
+  .full-column
+    padding: 70px 0
+
+
+// Typography
+
+.home-lead
+  font-family: 'Ubuntu' sans-serif
+  font-size: 14px
+  font-weight: 700
+  line-height: 1.5
+  margin: 0
+  color: $primary-color
+
+  span.bold-lead
+    font-weight: bold
+
+h1, h2
+  .thin
+    font-weight: 300
+
+  .thick
+    font-weight: 700

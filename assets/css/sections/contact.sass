@@ -1,0 +1,65 @@
+section.contact
+  background:
+    image: url('/assets/img/white-background.png')
+    color: $primary-color
+    position: center
+  height: 100%
+  padding: 50px 0 0
+  position: relative
+
+  h2
+    color: $primary-color
+    text-align: center
+
+  input[type='text']
+    width: 80%
+    padding: 10px 20px
+    margin-bottom: 15px
+    border: 1px solid $primary-color
+
+  input[type='submit'],
+  input[type='reset']
+    padding: 10px 20px
+    margin: 10px 10px 10px 0
+    background-color: #FFF
+    border: 1px solid $primary-color
+    color: $primary-color
+    transition: color .4s,background-color .4s,border .4s;
+
+    &:hover
+      border-color: $selection-color
+      //color: #FFF
+
+  label
+    font-family: 'Ubuntu' sans-serif
+    font-size: 14px
+    font-weight: 300
+    line-height: 26px
+    padding-top: 10px
+
+  textarea
+    width: 80%
+    padding: 10px 20px
+    border: 1px solid $primary-color
+
+  .call-email
+    position: absolute
+    bottom: 35%
+    right: 20%
+    text-align: center
+
+    p
+      transform: rotate(-10deg)
+      font-family: 'Rock Salt', cursive
+      margin: 5px
+
+    img
+      float: left
+
+  @media screen and ( max-width: 1024px)
+    .call-email
+      right: 15%
+
+  @media screen and ( max-width: 768px )
+    .call-email
+      right: 0
