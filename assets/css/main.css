@@ -354,6 +354,173 @@ td,
 th {
   padding: 0; }
 
+*,
+*:after,
+*::before {
+  box-sizing: border-box; }
+
+.ac-custom {
+  padding: 0 3em;
+  max-width: 900px;
+  margin: 0 auto; }
+
+.ac-custom h2 {
+  font-size: 3em;
+  font-weight: 300;
+  padding: 0 0 0.5em;
+  margin: 0 0 30px; }
+
+.ac-custom ul,
+.ac-custom ol {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px; }
+
+.ac-custom .stuff {
+  margin: 0 auto;
+  padding: 2em 0;
+  position: relative; }
+
+.ac-custom label {
+  display: inline-block;
+  position: relative;
+  font-size: 2em;
+  padding: 0 0 0 80px;
+  vertical-align: top;
+  color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: color 0.3s; }
+
+.ac-custom input[type="submit"] {
+  padding: 10px 20px;
+  margin: 10px 10px 10px 0;
+  background-color: #FFF;
+  border: 1px solid #000;
+  color: #000;
+  transition: color 0.4s, background-color 0.4s, border 0.4s; }
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"],
+.ac-custom label::before {
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 0;
+  margin-top: -25px;
+  position: absolute;
+  cursor: pointer; }
+
+.ac-custom input[type="submit"],
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"] {
+  opacity: 0;
+  -webkit-appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 100; }
+
+.ac-custom input[type="submit"]::before,
+.ac-custom label::before {
+  content: '';
+  border: 4px solid #fff;
+  transition: opacity 0.3s; }
+
+.ac-radio label::before {
+  border-radius: 50%; }
+
+.ac-custom input[type="submit"] + label,
+.ac-custom input[type="checkbox"]:checked + label,
+.ac-custom input[type="radio"]:checked + label {
+  color: #000; }
+
+.ac-custom input[type="submit"] + label::before,
+.ac-custom input[type="checkbox"]:checked + label::before,
+.ac-custom input[type="radio"]:checked + label::before {
+  opacity: 0.8; }
+
+/* General SVG and path styles */
+.ac-custom svg {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+  left: 5px;
+  pointer-events: none; }
+
+.ac-custom svg path {
+  stroke: #444444;
+  stroke-width: 13px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none; }
+
+/* Specific input, SVG and path styles */
+/* Circle */
+.ac-circle input[type="checkbox"],
+.ac-circle input[type="radio"],
+.ac-circle label::before {
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  left: 10px;
+  position: absolute; }
+
+.ac-circle label::before {
+  background-color: #fff;
+  border: none; }
+
+.ac-circle svg {
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  left: -10px; }
+
+.ac-circle svg path {
+  stroke-width: 5px; }
+
+/* Box Fill */
+.ac-boxfill svg path {
+  stroke-width: 8px; }
+
+/* Swirl */
+.ac-swirl svg path {
+  stroke-width: 8px; }
+
+/* List */
+.ac-list ol {
+  list-style: decimal;
+  list-style-position: inside; }
+
+.ac-list ol li {
+  font-size: 2em;
+  padding: 1em 1em 0 2em;
+  text-indent: -40px; }
+
+.ac-list ol li label {
+  font-size: 1em;
+  text-indent: 0;
+  padding-left: 30px; }
+
+.ac-list label::before {
+  display: none; }
+
+.ac-list svg {
+  width: 100%;
+  height: 80px;
+  left: 0;
+  top: 1.2em;
+  margin-top: 0px; }
+
+.ac-list svg path {
+  stroke-width: 4px; }
+
+/* Media Queries */
+@media screen and (max-width: 50em) {
+  section {
+    font-size: 80%; } }
+
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: #444444;
@@ -529,7 +696,6 @@ section.about {
     background-color: #FFF;
     border: 1px solid #444444;
     color: #444444;
-    border-radius: .3em;
     transition: color 0.4s, background-color 0.4s, border 0.4s; }
     section.about button:hover {
       border-color: #DDD; }
@@ -610,7 +776,8 @@ section.contact {
       right: 15%; } }
   @media screen and (max-width: 768px) {
     section.contact .call-email {
-      right: 0; } }
+      right: 0;
+      bottom: 25%; } }
 
 .nav-background {
   position: fixed;
@@ -679,7 +846,7 @@ section a {
   color: black; }
 
 section.work {
-  background-color: #444444;
+  background-color: #FFF;
   position: relative;
   max-height: 300px;
   overflow: hidden; }
@@ -708,7 +875,8 @@ section.work {
     position: absolute;
     top: 20px;
     left: 0;
-    right: 0; }
+    right: 0;
+    z-index: 9999; }
     section.work .work-title h2 {
       padding-top: 30px;
       color: #FFF; }
@@ -740,105 +908,26 @@ section.work {
           -webkit-transform: scale(1.1);
               -ms-transform: scale(1.1);
                   transform: scale(1.1); }
-    section.work .work-content ul {
-      padding: 0;
-      margin: 0; }
-      section.work .work-content ul li {
-        float: left;
-        width: 50%;
-        display: block;
-        overflow: hidden; }
-      section.work .work-content ul .snip1162 {
-        position: relative; }
-        section.work .work-content ul .snip1162 * {
-          box-sizing: border-box;
-          transition: all 0.35s ease-in-out; }
-        section.work .work-content ul .snip1162 .caption-top {
-          position: absolute;
-          top: 40px;
-          bottom: 40px;
-          left: 0;
-          right: 20px;
-          -webkit-transform: translateY(100%);
-          -ms-transform: translateY(100%);
-              transform: translateY(100%); }
-          section.work .work-content ul .snip1162 .caption-top h3, section.work .work-content ul .snip1162 .caption-top p {
-            background-color: #DDD;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            padding: 10px;
-            color: #444444;
-            font-weight: 300;
-            border: 1px solid #FFF;
-            border-width: 1px 1px 1px 0; }
-        section.work .work-content ul .snip1162 .caption-bottom {
-          position: absolute;
-          top: 40px;
-          bottom: 40px;
-          left: 0;
-          right: 20px;
-          -webkit-transform: translateY(0);
-          -ms-transform: translateY(0);
-              transform: translateY(0); }
-          section.work .work-content ul .snip1162 .caption-bottom h3, section.work .work-content ul .snip1162 .caption-bottom p {
-            background-color: #DDD;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 10px;
-            color: #444444;
-            font-weight: 300; }
-        section.work .work-content ul .snip1162 h3, section.work .work-content ul .snip1162 p {
-          margin: 0;
-          position: absolute;
-          width: 100%;
-          left: 0;
-          opacity: 0; }
-        section.work .work-content ul .snip1162 a {
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          position: absolute;
-          z-index: 1; }
-        section.work .work-content ul .snip1162 img {
-          display: block;
-          position: relative;
-          width: 100%;
-          height: 100%;
-          opacity: 0.9;
-          line-height: 0; }
-        section.work .work-content ul .snip1162:hover .caption-top {
-          -webkit-transform: translateY(0);
-          -ms-transform: translateY(0);
-              transform: translateY(0); }
-        section.work .work-content ul .snip1162:hover .caption-bottom {
-          -webkit-transform: translateY(0);
-          -ms-transform: translateY(0);
-              transform: translateY(0); }
-        section.work .work-content ul .snip1162:hover .caption-top h2, section.work .work-content ul .snip1162:hover .caption-top h3, section.work .work-content ul .snip1162:hover .caption-top p, section.work .work-content ul .snip1162:hover .caption-bottom h2, section.work .work-content ul .snip1162:hover .caption-bottom h3, section.work .work-content ul .snip1162:hover .caption-bottom p {
-          -webkit-transform: translate3d(0%, 0%, 0);
-          -ms-transform: translate(0%, 0%, 0);
-              transform: translate(0%, 0%, 0); }
-        section.work .work-content ul .snip1162:hover .caption-top p, section.work .work-content ul .snip1162:hover .caption-top h3, section.work .work-content ul .snip1162:hover .caption-bottom p, section.work .work-content ul .snip1162:hover .caption-bottom h3 {
-          opacity: 0.9;
-          transition-delay: 0.35s; }
-        section.work .work-content ul .snip1162:hover img {
-          -webkit-filter: grayscale(1);
-          filter: grayscale(1); }
   @media screen and (max-width: 1200px) {
     section.work .work-content ul li {
       float: none;
       width: 100%; } }
   @media screen and (max-width: 768px) {
     section.work .work-title {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      top: -50px; }
       section.work .work-title h2 {
         padding: 50px 0;
-        margin: 0; }
+        margin: 0; } }
+
+@media screen and (max-width: 550px) {
+  section.work {
+    max-height: 100%;
+    overflow: visible;
+    padding-top: 50px; }
     section.work .work-content {
-      padding: 0; } }
+      padding: 0;
+      display: block; } }
 
 section.footer {
   background-color: transparent;
@@ -934,8 +1023,6 @@ section.footer {
 @media (max-width: 768px) {
   .col-1 {
     max-width: 100%; }
-  .col-50 {
-    width: auto; }
   .full-column {
     padding: 70px 0; } }
 
