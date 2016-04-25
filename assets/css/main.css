@@ -857,7 +857,7 @@ section.work {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     height: 250px;
     margin: auto;
     display: -webkit-flex;
@@ -914,8 +914,7 @@ section.work {
       width: 100%; } }
   @media screen and (max-width: 768px) {
     section.work .work-title {
-      margin-bottom: 20px;
-      top: -50px; }
+      margin-bottom: 20px; }
       section.work .work-title h2 {
         padding: 50px 0;
         margin: 0; } }
@@ -925,6 +924,8 @@ section.work {
     max-height: 100%;
     overflow: visible;
     padding-top: 50px; }
+    section.work .work-title {
+      top: -50px; }
     section.work .work-content {
       padding: 0;
       display: block; } }
