@@ -8,7 +8,7 @@ section.contact#contact
 
   .flex.flex-center
     .col-50
-      form(action='/signup',method='post')
+      form(action='../_php/form.php',method='post',name='contactForm')
         div(data-role='fieldcontain')
           // fieldset(data-role='controlgroup')
           label(for='name') Name
@@ -35,4 +35,4 @@ section.contact#contact
   .call-email
     img(src='assets/img/up-arrow.png')
     p
-      | Or just call/email me!
+      | Or call/email me!
