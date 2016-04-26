@@ -767,10 +767,8 @@ section.contact {
       -webkit-transform: rotate(-10deg);
           -ms-transform: rotate(-10deg);
               transform: rotate(-10deg);
-      font-family: 'Rock Salt', cursive;
-      margin: 5px; }
+      font-family: 'Rock Salt', cursive; }
     section.contact .call-email img {
-      float: left;
       width: 50%; }
   @media screen and (max-width: 1024px) {
     section.contact .call-email {
