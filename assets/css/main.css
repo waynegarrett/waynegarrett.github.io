@@ -727,7 +727,7 @@ section.contact {
   background-color: #444444;
   background-position: center;
   height: 100%;
-  padding: 50px 0 0;
+  padding: 50px 0 40px;
   position: relative; }
   section.contact h2 {
     color: #444444;
@@ -760,8 +760,8 @@ section.contact {
     border: 1px solid #444444; }
   section.contact .call-email {
     position: absolute;
-    bottom: 2%;
-    right: 30%;
+    bottom: 10%;
+    right: 28%;
     text-align: center; }
     section.contact .call-email p {
       -webkit-transform: rotate(-10deg);
@@ -770,16 +770,17 @@ section.contact {
       font-family: 'Rock Salt', cursive;
       margin: 5px; }
     section.contact .call-email img {
-      float: left; }
+      float: left;
+      width: 50%; }
   @media screen and (max-width: 1024px) {
     section.contact .call-email {
       right: 15%; } }
   @media screen and (max-width: 768px) {
     section.contact .call-email {
-      right: 0;
-      bottom: 0; }
-      section.contact .call-email img {
-        width: 50%; } }
+      right: 10%; } }
+  @media screen and (max-width: 550px) {
+    section.contact .call-email {
+      right: 0; } }
 
 .nav-background {
   position: fixed;

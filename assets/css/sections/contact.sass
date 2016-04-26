@@ -4,7 +4,7 @@ section.contact
     color: $primary-color
     position: center
   height: 100%
-  padding: 50px 0 0
+  padding: 50px 0 40px
   position: relative
 
   h2
@@ -44,8 +44,8 @@ section.contact
 
   .call-email
     position: absolute
-    bottom: 2%
-    right: 30%
+    bottom: 10%
+    right: 28%
     text-align: center
 
     p
@@ -55,6 +55,7 @@ section.contact
 
     img
       float: left
+      width: 50%
 
   @media screen and ( max-width: 1024px)
     .call-email
@@ -62,8 +63,8 @@ section.contact
 
   @media screen and ( max-width: 768px )
     .call-email
-      right: 0
-      bottom: 0
+      right: 10%
 
-      img
-        width: 50%
+  @media screen and ( max-width: 550px )
+    .call-email
+      right: 0
