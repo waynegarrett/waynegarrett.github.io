@@ -760,8 +760,8 @@ section.contact {
     border: 1px solid #444444; }
   section.contact .call-email {
     position: absolute;
-    bottom: 35%;
-    right: 20%;
+    bottom: 2%;
+    right: 30%;
     text-align: center; }
     section.contact .call-email p {
       -webkit-transform: rotate(-10deg);
@@ -777,7 +777,9 @@ section.contact {
   @media screen and (max-width: 768px) {
     section.contact .call-email {
       right: 0;
-      bottom: 25%; } }
+      bottom: 0; }
+      section.contact .call-email img {
+        width: 50%; } }
 
 .nav-background {
   position: fixed;
@@ -1025,7 +1027,9 @@ section.footer {
   .col-1 {
     max-width: 100%; }
   .full-column {
-    padding: 70px 0; } }
+    padding: 70px 0; }
+  .col-25 {
+    width: 65%; } }
 
 .home-lead {
   font-family: 'Ubuntu' sans-serif;
