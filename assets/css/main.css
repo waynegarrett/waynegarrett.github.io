@@ -678,7 +678,8 @@ section.hero {
   background-repeat: no-repeat;
   width: 100vw;
   height: 40vh;
-  max-height: 264px; }
+  max-height: 264px;
+  margin-bottom: -1px; }
 
 section.about {
   background-color: #FFF;
@@ -728,7 +729,8 @@ section.contact {
   background-position: center;
   height: 100%;
   padding: 50px 0 40px;
-  position: relative; }
+  position: relative;
+  margin-bottom: -1px; }
   section.contact h2 {
     color: #444444;
     text-align: center; }
@@ -851,7 +853,8 @@ section.work {
   background-color: #FFF;
   position: relative;
   max-height: 300px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: -1px; }
   section.work .work-title {
     background-color: transparent;
     background-image: url(/assets/img/brush-bg.png);
@@ -940,6 +943,7 @@ section.footer {
   width: 100vw;
   height: 40vh;
   max-height: 264px;
+  margin-top: -1px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1029,7 +1033,9 @@ section.footer {
   .full-column {
     padding: 70px 0; }
   .col-25 {
-    width: 65%; } }
+    width: 65%; }
+  .home-wrap {
+    background-position: right; } }
 
 .home-lead {
   font-family: 'Ubuntu' sans-serif;
